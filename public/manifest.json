@@ -1,0 +1,15 @@
+{
+    "short_name": "Magic8Ball",
+    "name": "Magic 8 ball from scratch",
+    "icons": [
+      {  
+        "src": "Emojione1_1F3B1.svg.png",  
+        "sizes": "512x512",  
+        "type": "image/png"  
+      }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff"
+  }

@@ -1,0 +1,42 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Tell the browser it's a PWA -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- Tell iOS it's a PWA -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="512x512" href="Emojione1_1F3B1.svg.png">
+</head>
+
+<body>
+    <p>Hello & welcome to the magic 8 ball!</p>
+    <form id="myForm">
+        <input placeholder="enter your question" />
+        <p id="answer">If you had typed a question the answer would have been here.</p>
+        <button type="submit">Ask the magic 8 ball.</button>
+    </form>
+    <script>
+        document.getElementById("myForm").addEventListener("submit", event => {
+            let aAnswers = ["outlook is good", "It's not in the cards", "definitely not", "don't count on it", "certainly", "my sources say yes", "It wasn't me", "The answer is yes!"];
+            let nAnswer = Math.floor(Math.random() * aAnswers.length);
+            document.getElementById("answer").innerHTML = aAnswers[nAnswer];
+            event.preventDefault();
+        });
+
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('worker.js').then(function (registration) {
+                    console.log('Worker registration successful', registration.scope);
+                }, function (err) {
+                    console.log('Worker registration failed', err);
+                }).catch(function (err) {
+                    console.log(err);
+                });
+            });
+        } else {
+            console.log('Service Worker is not supported by browser.');
+        }
+
+    </script>
+</body>
