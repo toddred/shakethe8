@@ -1,5 +1,9 @@
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shake the Eight</title>
     <!-- Tell the browser it's a PWA -->
     <meta name="mobile-web-app-capable" content="yes">
     <!-- Tell iOS it's a PWA -->
@@ -10,13 +14,30 @@
 </head>
 
 <body>
-    <p>Hello & welcome to the magic 8 ball!</p>
-    <form id="myForm">
-        <input placeholder="enter your question" />
-        <p id="answer">If you had typed a question the answer would have been here.</p>
-        <button type="submit">Ask the magic 8 ball.</button>
-    </form>
-    <script>
+<div style="  position: relative;
+text-align: center;
+color: white;"> 
+    <img src=".\480px-Magic_eight_ball.png" style="width:100%" />
+    <div style="position: absolute;
+    top: 57%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    color:white;">
+        <p style="  text-align: center;
+        top: 50%;
+        left: -47%;
+        position: relative;
+        width: 93px;
+        height: 93px;
+        margin: 0px;" id="answer">Shake the Eight Ball.</p>
+    </div>
+</div>
+
+<form id="myForm">
+
+    <button type="submit">Shake.</button>
+</form>
+<script>
       const answer = [
     "It is certain.",
     " It is decidedly so.",
